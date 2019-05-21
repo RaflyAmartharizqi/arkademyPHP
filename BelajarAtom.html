@@ -1,0 +1,194 @@
+<html> 
+  <head>
+    <title>Profile Page</title> <!--Judul dari html ini-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Meta viewport= untuk merender laman sesuai device
+    content = width=device-width digunakan untuk menyetel lebar tampilan yang terlihat ke lebar perangakat, initial-scale = berskala 1:1 dengan 
+  devicenya  -->
+    <link rel="stylesheet"href="acces/CSS/style.css"> <!--Link rel= berbentuk stylesheet, href= merujuk pada link CSSnya-->
+    </head>
+  <body> <!---->
+    <nav> <!--Untuk membuat navigasi atau rujukan link-->
+      <div class="menu-mobile"> <!--Menandai menu-mobile, tidak berefek apa-apa-->
+        <a href="#" onclick="showMenu()">Menu</a> <!--Tombol ini akan memunculkan menu pada navbar apabila diclick (ini merujuk pada function 
+          showMenu()). -->
+      </div>
+      <ul id="menu"> <!--Disini, tag ul digunakan untuk membuat bagian-bagian atau memberi tanda-->
+        <li><a href="https://google.com">Home</a></li> <!--Tag li digunakan untuk menambahkan bagian-bagiannya-->
+        <li><a href="#">Product</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">My Inventory</a></li>
+      </ul>
+    </nav>
+    <section id="box-profile"> <!--Menandakan bagian dari box-profile-->
+      <div class="img-profile"> <!--Menandakan bagian img-profile-->
+        <div class="photo" style="background-image:url(acces/img/DSC_1270.jpg);"></div> <!--Div class photo sebagai tanda atau bagian photo, 
+          tag style digunakan untuk menyisipkan CSS yang berupa foto dan dijadikan background-image-->
+      </div>
+      <div class="description"><!--Menandakan bagian deskripsi-->
+        <h1 id="pName">Rafly Amartharizqi</h1> <!--Teks Rafly Amartharizqi dengan id atau penanda pName-->
+        <p id="pRole">Web Developer</p> <!--Teks Web Developer dengan id atau penanda pRole-->
+        <a href="#input-form" class="button bg-green" onclick="editForm()">Contact</a> <!--Teks Contact, apabila dibtekan akan merujuk pada
+         #input-form, menggunakan penandanya yaitu button bg-green dan apabila diclick akan merujuk pada function editForm()-->
+        <a href="#" class="button border-blue">Resume</a> <!--Teks Resume dengan penanda button border-blue-->
+      </div>
+      <div class="information"> <!--Menandakan bagian information-->
+        <div class="data"> <!--Menandakan bagian data-->
+        <p class="field">Availability</p> <!--Membuat paragraph baru dengan class field yang bernama Availability-->
+          <p id="pAvailable" class="text-gray">Full Time</p> <!--Tag <p> digunakan untuk membuat paragraph baru, tag id digunakan sebagai
+             kode unik yaitu pAvailable(tag id ini merujuk pada nama variabel) kemudian class nya yaitu text gray-->
+        </div>
+        <div class="data"><!--Menandakan bagian data-->
+          <p class="field">Age</p><!--Membuat paragraph baru dengan class field yang bernama Age-->
+          <p id="pAge" class="text-gray">16</P><!--Tag <p> digunakan untuk membuat paragraph baru, tag id digunakan sebagai
+              kode unik yaitu pAvailable(tag id ini merujuk pada nama variabel) kemudian class nya yaitu text gray-->
+          </div>
+        <div class="data"><!--Menandakan bagian data-->
+          <p class="field">Location</p><!--Membuat paragraph baru dengan class field yang bernama Location-->
+          <p id="pLocation" class="text-gray">Sidoarjo, Indonesia</P><!--Tag <p> digunakan untuk membuat paragraph baru, tag id digunakan sebagai
+              kode unik yaitu pAvailable(tag id ini merujuk pada nama variabel) kemudian class nya yaitu text gray-->
+        </div>
+        <div class="data"><!--Menandakan bagian data-->
+          <p class="field">Years Experience</p><!--Membuat paragraph baru dengan class field yang bernama Years Experience-->
+          <p id="pExperience" class="text-gray"> 5</P><!--Tag <p> digunakan untuk membuat paragraph baru, tag id digunakan sebagai
+              kode unik yaitu pAvailable(tag id ini merujuk pada nama variabel) kemudian class nya yaitu text gray-->
+        </div>
+        <div class="data"><!--Menandakan bagian data-->
+          <p class="field">Email</p><!--Membuat paragraph baru dengan class field yang bernama EMail-->
+          <p id="pEmail" class="text-gray">adadeh@gmail.com</P><!--Tag <p> digunakan untuk membuat paragraph baru, tag id digunakan sebagai
+              kode unik yaitu pAvailable(tag id ini merujuk pada nama variabel) kemudian class nya yaitu text gray-->
+          </div>
+        </div>
+      </section>
+
+      <section id="input-form"> <!--Ini adalah bagian dari kelompok input-form-->
+        <!--<form method="#" action="#">-->
+          <div class="form"> <!--Menandakan class form-->
+            <label>Nama</label> <!--tag label berguna untuk pelengkap keterangan-->
+            <input id="inpName" type="text" name="name"> <!--tag input digunakan untuk menunjukkan sebuah inputan (masukkan), type = type dari 
+            form inputan ini adalah text dengan namanya yaitu nama-->
+          </div>
+          <div class="form"> <!--Menandakan class form-->
+            <label>Role</label><!--tag label berguna untuk pelengkap keterangan-->
+            <input id="inpRole" type="text" name="role"><!--tag input digunakan untuk menunjukkan sebuah inputan (masukkan), type = type dari 
+              form inputan ini adalah text dengan namanya yaitu role-->
+          </div>
+          <div class="form"> <!--Menandakan class form-->
+            <label>Availability</label><!--tag label berguna untuk pelengkap keterangan-->
+            <input id="inpAvailability" type="text" name="availability"><!--tag input digunakan untuk menunjukkan sebuah inputan (masukkan), 
+              type = type dari form inputan ini adalah text dengan namanya yaitu availability-->
+          </div>
+          <div class="form"> <!--Menandakan class form-->
+            <label>Age</label><!--tag label berguna untuk pelengkap keterangan-->
+            <input id="inpAge" type="number" name="age"><!--tag input digunakan untuk menunjukkan sebuah inputan (masukkan), type = type dari 
+              form inputan ini adalah number (berbentuk angka) dengan namanya yaitu age-->
+          </div>
+          <div class="form"> <!--Menandakan class form-->
+            <label>Location</label><!--tag label berguna untuk pelengkap keterangan-->
+            <input id="inpLocation" type="text" name="location"><!--tag input digunakan untuk menunjukkan sebuah inputan (masukkan),
+               type = type dari form inputan ini adalah text dengan namanya yaitu location-->
+          </div>
+          <div class="form"> <!--Menandakan class form-->
+            <label>Years Experience</label><!--tag label berguna untuk pelengkap keterangan-->
+            <input id="inpYears" type="text" name="years"><!--tag input digunakan untuk menunjukkan sebuah inputan (masukkan), type = type dari 
+              form inputan ini adalah text dengan namanya yaitu years-->
+          </div>
+          <div class="form"> <!--Menandakan class form-->
+            <label>Email</label><!--tag label berguna untuk pelengkap keterangan-->
+            <input id="inpEmail" type="email" name="email"><!--tag input digunakan untuk menunjukkan sebuah inputan (masukkan), type = type dari 
+              form inputan ini adalah text dengan namanya yaitu email-->
+          </div>
+          <div class="form"> <!--Menandakan class form-->
+            <input onclick="simpanForm()" type="submit" name="submit" 
+            value="SUMBIT" class="bg-blue"> <!--tag input digunakan untuk menunjukkan sebuah inputan (masukkan), type = type dari 
+              form inputan ini adalah submit dengan namanya yaitu submit value/nilainya berupa sumbit, onCLick = jika diclick akan merujuk pada
+            function simpanForm()-->
+            </div>
+        <!-- </form> -->
+      </section>
+
+      <script>
+        var formMenu = document.getElementById("input-form"); /* Membuat variabel formMenu dengan mengambil valuenya dari id input-form */
+        formMenu.style.display = "none"; /* style display dari formMenu none*/
+
+        function editForm(){
+          if(formMenu.style.display === "none"){ /*Jika formMenu display= none maka akan menjadi block*/
+            formMenu.style.display = "block";
+          }else{
+            formMenu.style.display = "none"; /* Jika formMenu display nya selain none= maka formMenu.style.display menjadi none */
+
+          }
+
+          var name = document.getElementById("pName").innerHTML; /* variabel name= document.getElementById (untuk mengambil sebuah value pada 
+          inputan yang ada di HTML dengan maengambil inputan dari ID pName) .innerHTML untuk mendapatkan atau mengatur
+           markup HTML yang terkandung dalam elemen*/
+          var role = document.getElementById("pRole").innerHTML;/* variabel role= document.getElementById (untuk mengambil sebuah value pada 
+          inputan yang ada di HTML dengan maengambil inputan dari ID pRole) .innerHTML untuk mendapatkan atau mengatur
+           markup HTML yang terkandung dalam elemen*/
+          var available = document.getElementById("pAvailable").innerHTML;/* variabel available= document.getElementById (untuk mengambil sebuah 
+          value pada inputan yang ada di HTML dengan maengambil inputan dari ID pName) .innerHTML untuk mendapatkan atau mengatur
+           markup HTML yang terkandung dalam elemen*/
+          var age = document.getElementById("pAge").innerHTML;/* variabel age= document.getElementById (untuk mengambil sebuah value pada 
+          inputan yang ada di HTML dengan maengambil inputan dari ID pAge) .innerHTML untuk mendapatkan atau mengatur
+           markup HTML yang terkandung dalam elemen*/
+          var location = document.getElementById("pLocation").innerHTML;/* variabel Location= document.getElementById (untuk mengambil sebuah value pada 
+          inputan yang ada di HTML dengan maengambil inputan dari ID pLocation) .innerHTML untuk mendapatkan atau mengatur
+           markup HTML yang terkandung dalam elemen*/
+          var experience = document.getElementById("pExperience").innerHTML;/* variabel Experience= document.getElementById (untuk mengambil sebuah value pada 
+          inputan yang ada di HTML dengan maengambil inputan dari ID pExperience) .innerHTML untuk mendapatkan atau mengatur
+           markup HTML yang terkandung dalam elemen*/
+          var email = document.getElementById("pEmail").innerHTML;/* variabel Email= document.getElementById (untuk mengambil sebuah value pada 
+          inputan yang ada di HTML dengan maengambil inputan dari ID pEmail) .innerHTML untuk mendapatkan atau mengatur
+           markup HTML yang terkandung dalam elemen*/
+
+          document.getElementById("inpName").value = name; /*Mengambil value dari id inpName, kemudian value nya dimasukkan kedalam variabel
+          name*/
+          document.getElementById("inpRole").value = role;/*Mengambil value dari id inpName, kemudian value nya dimasukkan kedalam variabel
+          name*/
+          document.getElementById("inpAvailability").value = available;/*Mengambil value dari id inpName, kemudian value nya dimasukkan kedalam
+           variabel name*/
+          document.getElementById("inpAge").value = age;/*Mengambil value dari id inpName, kemudian value nya dimasukkan kedalam variabel
+          name*/
+          document.getElementById("inpLocation").value = location;/*Mengambil value dari id inpName, kemudian value nya dimasukkan 
+          kedalam variabel name*/
+          document.getElementById("inpYears").value = experience;/*Mengambil value dari id inpName, kemudian value nya dimasukkan 
+          kedalam variabel name*/
+          document.getElementById("inpEmail").value = email;/*Mengambil value dari id inpName, kemudian value nya dimasukkan kedalam variabel
+          name*/
+        }
+
+        function simpanForm(){
+          formMenu.style.display = "none";
+          var name = document.getElementById("inpName").value; /*Mengambil value dari inputan name kemudian diambil valuenya*/
+          var role = document.getElementById("inpRole").value; /*Mengambil value dari inputan role kemudian diambil valuenya*/
+          var available = document.getElementById("inpAvailability").value; /*Mengambil value dari inputan available kemudian diambil valuenya*/
+          var age = document.getElementById("inpAge").value; /*Mengambil value dari inputan Age kemudian diambil valuenya*/
+          var location = document.getElementById("inpLocation").value; /*Mengambil value dari inputan Location kemudian diambil valuenya*/
+          var experience = document.getElementById("inpYears").value; /*Mengambil value dari inputan experience kemudian diambil valuenya*/
+          var email = document.getElementById("inpEmail").value;/*Mengambil value dari inputan email kemudian diambil valuenya*/
+
+          document.getElementById("pName").innerHTML = name; /*Mengambil id pName kemudian dijadikan variabel name*/
+          document.getElementById("pRole").innerHTML = role;/*Mengambil id pRole kemudian dijadikan variabel role*/
+          document.getElementById("pAvailable").innerHTML = available;/*Mengambil id pAvailable kemudian dijadikan variabel Available*/
+          document.getElementById("pAge").innerHTML = age;/*Mengambil id pAge kemudian dijadikan variabel age*/
+          document.getElementById("pLocation").innerHTML = location;/*Mengambil id pLocation kemudian dijadikan variabel Location*/
+          document.getElementById("pExperience").innerHTML = experience;/*Mengambil id pExperience kemudian dijadikan variabel experience*/
+          document.getElementById("pEmail").innerHTML = email;/*Mengambil id pEmail kemudian dijadikan variabel Email*/
+        }
+    
+        function showMenu(){ 
+          var menu = document.getElementById("menu") /*Variabel menu mengambil nilainya dari id menu*/
+          var box = document.getElementById("box-profile")  /*Variabel box mengambil nilainya dari box-profile*/
+
+          if(menu.style.display === "block"){ /*Apabila menu.style.display nya adalah blok maka akan menjadi tidak ada atau none
+          dan box.style.paddingTop nyamenjadi 0px*/
+            menu.style.display = "none";
+            box.style.paddingTop = "0px";
+          }else{ /*Apabila tidak maka tampilan dari menu adalah block dengan menggunakan paddingTop 125px*/
+            menu.style.display = "block";
+            box.style.paddingTop = "125px";
+          }
+        }
+      </script>
+  </body>
+</html>
